@@ -49,7 +49,7 @@ jobs:
       shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
-    - run: sh install.sh
+    - run: bash install.sh
       shell: bash
       env:
         ENERGYPLUS_VERSION: ${{ inputs.energyplus-version }}
