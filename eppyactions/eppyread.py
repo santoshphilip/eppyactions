@@ -20,12 +20,18 @@ def getversion(iddname, idfname):
     versionnumber = version.Version_Identifier
     return versionnumber
 
+def getversion_1(iddname, idfname):
+    """return the version number of the idf file"""
+    idf = eppy.openidf(idfname)
+    version = idf.idfobjects['version'][0]
+    versionnumber = version.Version_Identifier
+    return versionnumber
 
 
 
 def main():
     iddname = iddfhandle
-    idfname = StringIO("  Version,8.7;")
+    idfname = StringIO("  Version,9.2.0;")
     print(getversion(iddname, idfname))
 
 if __name__ == '__main__':
