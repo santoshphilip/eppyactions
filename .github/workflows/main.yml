@@ -2,6 +2,13 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
 name: eppy package
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 inputs:
   energyplus-version:
     description: 'EnergyPlus major.minor.patch version'
@@ -16,13 +23,6 @@ inputs:
     default: 9-2-0
     required: true
   
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
 jobs:
   build:
 
