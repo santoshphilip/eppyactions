@@ -33,7 +33,7 @@ jobs:
     steps:
     - run: echo Installing EnergyPlusV${{ inputs.energyplus-version }}...
       shell: bash
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+    - run: echo "${{ github.action_path }}" >> ${{ github.workspace }} 
       shell: bash
     - run: install.sh
       shell: bash
