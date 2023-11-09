@@ -1,0 +1,23 @@
+2023-11-09
+==========
+
+github actions:
+
+- install for E+ worked for
+    - E+ version 22.2
+    - Ubuntu-20.04
+- install for E+ failed for
+    - E+ version 22.2
+    - Ubuntu-22.04
+
+both ./github/workflows/main.yml and ./github/workflows/install.sh have to be updated to reflect the above two installs.
+
+    
+Next step
+---------
+
+- have a setup file where version number can be set.
+- hard todo -
+    - two files have to be updated
+    - might have to do by hand.
+    - local testing may have to be done from a different place.
