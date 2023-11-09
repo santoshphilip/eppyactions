@@ -12,7 +12,7 @@ iddfhandle = StringIO(iddv800.iddtxt)
 @pytest.mark.parametrize(
     "iddname, idfname, expected",
     [
-    (iddfhandle, StringIO("  Version,9.2.0;"), "9.2.0"), # iddname, idfname, expected
+    (iddfhandle, StringIO("  Version,23.2.0;"), "23.2.0"), # iddname, idfname, expected
     ]
 )
 def test_getversion(iddname, idfname, expected):
@@ -25,7 +25,7 @@ def test_getversion(iddname, idfname, expected):
 @pytest.mark.parametrize(
     "iddname, idfname, expected",
     [
-    (iddfhandle, StringIO("  Version,9.2.0;"), "9.2.0"), # iddname, idfname, expected
+    (iddfhandle, StringIO("  Version,23.2.0;"), "23.2.0"), # iddname, idfname, expected
     ]
 )
 def test_getversion_1(iddname, idfname, expected):
