@@ -47,9 +47,12 @@ jobs:
       shell: bash
     - shell: bash
       env:
-        ENERGYPLUS_VERSION: ${{ inputs.energyplus-version }}
-        ENERGYPLUS_SHA: ${{ inputs.energyplus-sha }}
-        ENERGYPLUS_INSTALL_VERSION: ${{ inputs.energyplus-install }}
+        ENERGYPLUS_VERSION: 23.2.0
+        ENERGYPLUS_SHA: 7636e6b3e9
+        ENERGYPLUS_INSTALL_VERSION: 23-2-0
+        # ENERGYPLUS_VERSION: ${{ inputs.energyplus-version }}
+        # ENERGYPLUS_SHA: ${{ inputs.energyplus-sha }}
+        # ENERGYPLUS_INSTALL_VERSION: ${{ inputs.energyplus-install }}
       run: bash .github/workflows/install.sh
 
     - name: Test with pytest

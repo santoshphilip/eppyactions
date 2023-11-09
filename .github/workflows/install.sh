@@ -2,7 +2,7 @@
 echo "$ENERGYPLUS_VERSION"
 echo "$ENERGYPLUS_SHA"
 echo "$ENERGYPLUS_INSTALL_VERSION"
-function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
+# function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
 # # Check if EnergyPlus env variables exist already. If not use these defaults
 # if [[ -z "${ENERGYPLUS_VERSION}" ]]; then
 #   export ENERGYPLUS_VERSION=9.2.0
