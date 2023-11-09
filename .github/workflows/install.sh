@@ -18,7 +18,7 @@ fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   if version_gt $ENERGYPLUS_VERSION 9.3.0; then
     export EXT="run"
-    export PLATFORM=Linux-Ubuntu22.04
+    export PLATFORM=Linux-Ubuntu20.04
   else
     export EXT="run"
     export PLATFORM=Linux
