@@ -17,10 +17,10 @@ fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   if version_gt $ENERGYPLUS_VERSION 9.3.0; then
-    export EXT="sh"
+    export EXT="run"
     export PLATFORM=Linux-Ubuntu18.04
   else
-    export EXT="sh"
+    export EXT="run"
     export PLATFORM=Linux
   fi
   export ATTCHBASE=67022360382
