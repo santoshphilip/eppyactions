@@ -2,6 +2,7 @@
 echo "$ENERGYPLUS_VERSION"
 echo "$ENERGYPLUS_SHA"
 echo "$ENERGYPLUS_INSTALL_VERSION"
+echo "$ENERGYPLUS_DOWNLOAD_URL"
 # function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
 # # Check if EnergyPlus env variables exist already. If not use these defaults
 # if [[ -z "${ENERGYPLUS_VERSION}" ]]; then
