@@ -21,3 +21,10 @@ Next step
     - two files have to be updated
     - might have to do by hand.
     - local testing may have to be done from a different place.
+
+There is away to do this.
+
+- set these two varibles in ``input:`` at the top of the mail.yml file
+- install.sh will pick it as an os.inviron() type of input
+- make sure that you set the variables in ``env:`` at the right place in mail.yml
+- for local test read it off from mail.yml
