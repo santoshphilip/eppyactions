@@ -57,7 +57,7 @@ jobs:
         echo "In YML $ENERGYPLUS_VERSION"
         echo "In YML $ENERGYPLUS_SHA"
         echo "In YML $ENERGYPLUS_INSTALL_VERSION"
-      run: bash .github/workflows/install.sh
+        bash .github/workflows/install.sh
 
     - name: Test with pytest
       run: |
