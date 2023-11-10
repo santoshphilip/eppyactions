@@ -8,9 +8,12 @@ on:
     branches: [ "main" , "i1_epversion"]
 
 env:
-  energyplus-version: 8.3.0
-  energyplus-sha: 6d97d074ea
-  energyplus-install: 8-3-0
+  energyplus-version1: 8.3.0
+  energyplus-sha1: 6d97d074ea
+  energyplus-install1: 8-3-0
+  energyplus-version2: 23.2.0
+  energyplus-sha2: 7636e6b3e9
+  energyplus-install2: 23-2-0
   ubuntu-version: 20.04
 
 # env:
@@ -50,9 +53,21 @@ jobs:
       shell: bash
     - shell: bash
       env:
-        ENERGYPLUS_VERSION: ${{ env.energyplus-version }}
-        ENERGYPLUS_SHA: ${{ env.energyplus-sha }}
-        ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install }}
+        ENERGYPLUS_VERSION: ${{ env.energyplus-version1 }}
+        ENERGYPLUS_SHA: ${{ env.energyplus-sha1 }}
+        ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install1 }}
+        UBUNTU_VERSION: ${{ env.ubuntu-version }}
+      run: |
+        echo "In YML $ENERGYPLUS_VERSION"
+        echo "In YML $ENERGYPLUS_SHA"
+        echo "In YML $ENERGYPLUS_INSTALL_VERSION"
+        echo "In YML $UBUNTU_VERSION"
+        bash .github/workflows/install.sh
+    - shell: bash
+      env:
+        ENERGYPLUS_VERSION: ${{ env.energyplus-version2 }}
+        ENERGYPLUS_SHA: ${{ env.energyplus-sha2 }}
+        ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install2 }}
         UBUNTU_VERSION: ${{ env.ubuntu-version }}
       run: |
         echo "In YML $ENERGYPLUS_VERSION"
