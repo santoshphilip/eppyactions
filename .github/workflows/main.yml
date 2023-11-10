@@ -10,7 +10,7 @@ on:
       gumby:
         description: 'EnergyPlus major.minor.patch version'
         required: true
-        default: '23.2.0'
+        default: "23.2.0"
       energyplus-version:
         description: 'EnergyPlus major.minor.patch version'
         required: true
