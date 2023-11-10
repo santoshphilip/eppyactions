@@ -13,7 +13,7 @@ env:
   energyplus-install: 8-3-0
   ubuntu-version: 20.04
 
-# env1:
+# env:
 #   energyplus-version: 8.3.0
 #   energyplus-sha: 6d97d074ea
 #   energyplus-install: 8-3-0
@@ -42,7 +42,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - run: echo see the dict ${{ env1.energyplus-version }} here
+    - run: echo see the dict ${{ env.energyplus-version }} here
       shell: bash
     - run: echo Installing EnergyPlusV${{ github.event }}...
       shell: bash
@@ -50,10 +50,10 @@ jobs:
       shell: bash
     - shell: bash
       env:
-        ENERGYPLUS_VERSION: ${{ env1.energyplus-version }}
-        ENERGYPLUS_SHA: ${{ env1.energyplus-sha }}
-        ENERGYPLUS_INSTALL_VERSION: ${{ env1.energyplus-install }}
-        UBUNTU_VERSION: ${{ env1.ubuntu-version }}
+        ENERGYPLUS_VERSION: ${{ env.energyplus-version }}
+        ENERGYPLUS_SHA: ${{ env.energyplus-sha }}
+        ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install }}
+        UBUNTU_VERSION: ${{ env.ubuntu-version }}
       run: |
         echo "In YML $ENERGYPLUS_VERSION"
         echo "In YML $ENERGYPLUS_SHA"
