@@ -19,7 +19,7 @@ on:
         description: 'EnergyPlus major-minor-patch version'
         default: 23-2-0
         required: true
-      gumby: "23.2.0"
+      gumby: '23.2.0'
 
 
 jobs:
