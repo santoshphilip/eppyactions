@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" , "i1_epversion"]
 
-env11:
+env:
   energyplus-version: 8.3.0
   energyplus-sha: 6d97d074ea
   energyplus-install: 8-3-0
