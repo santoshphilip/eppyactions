@@ -22,7 +22,7 @@ on:
       gumby:
         description: 'EnergyPlus major.minor.patch version'
         required: true
-        default: '23.2.0'
+        default: 20.04
 
 env:
   energyplus-version: 23.2.0
@@ -35,7 +35,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-${{ inputs.gumby }}
     strategy:
       fail-fast: false
       matrix:
