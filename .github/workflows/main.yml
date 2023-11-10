@@ -28,6 +28,9 @@ env:
   mascot: Mona
   super_duper_var: totally_awesome
   energyplus-version: 23.2.0
+  energyplus-sha: 7636e6b3e9
+  energyplus-install: 23-2-0
+
 
 
 jobs:
@@ -59,9 +62,9 @@ jobs:
       shell: bash
     - shell: bash
       env:
-        ENERGYPLUS_VERSION: ${{ inputs.energyplus-version }}
-        ENERGYPLUS_SHA: ${{ inputs.energyplus-sha }}
-        ENERGYPLUS_INSTALL_VERSION: ${{ inputs.energyplus-install }}
+        ENERGYPLUS_VERSION: ${{ env.energyplus-version }}
+        ENERGYPLUS_SHA: ${{ env.energyplus-sha }}
+        ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install }}
         # ENERGYPLUS_VERSION: 23.2.0
         # ENERGYPLUS_SHA: 7636e6b3e9
         # ENERGYPLUS_INSTALL_VERSION: 23-2-0
