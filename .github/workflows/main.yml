@@ -10,7 +10,7 @@ on:
 env:
   energyplus-version: 8.2.0
   energyplus-sha: 8397c2e30b
-  energyplus-install:i 8-2-0
+  energyplus-install: 8-2-0
   ubuntu-version: 20.04
 
 
