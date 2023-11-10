@@ -46,7 +46,7 @@ jobs:
     #     python -m pip install --upgrade pip
     #     python -m pip install pytest
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - run: echo see the dict ${{ github.action }} here
+    - run: echo see the dict ${{ github.event }} here
       shell: bash
     - run: echo Installing EnergyPlusV${{ github.event }}...
       shell: bash
