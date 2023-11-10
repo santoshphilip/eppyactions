@@ -6,19 +6,20 @@ name: eppy package
 on:
   push:
     branches: [ "main" , "i1_epversion"]
-    inputs:
-      energyplus-version:
-        description: 'EnergyPlus major.minor.patch version'
-        required: true
-        default: 23.2.0
-      energyplus-sha:
-        description: 'EnergyPlus version SHA'
-        required: true
-        default: 7636e6b3e9
-      energyplus-install:
-        description: 'EnergyPlus major-minor-patch version'
-        default: 23-2-0
-        required: true
+
+inputs:
+  energyplus-version:
+    description: 'EnergyPlus major.minor.patch version'
+    required: true
+    default: 23.2.0
+  energyplus-sha:
+    description: 'EnergyPlus version SHA'
+    required: true
+    default: 7636e6b3e9
+  energyplus-install:
+    description: 'EnergyPlus major-minor-patch version'
+    default: 23-2-0
+    required: true
 
 
 jobs:
