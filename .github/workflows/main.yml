@@ -35,7 +35,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-${{ env.ubuntu-version }}
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
@@ -64,6 +64,7 @@ jobs:
         ENERGYPLUS_VERSION: ${{ env.energyplus-version }}
         ENERGYPLUS_SHA: ${{ env.energyplus-sha }}
         ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install }}
+        UBUNTU_VERSION: ${{ env.ubuntu-version }}
         # ENERGYPLUS_VERSION: 23.2.0
         # ENERGYPLUS_SHA: 7636e6b3e9
         # ENERGYPLUS_INSTALL_VERSION: 23-2-0
@@ -71,6 +72,7 @@ jobs:
         echo "In YML $ENERGYPLUS_VERSION"
         echo "In YML $ENERGYPLUS_SHA"
         echo "In YML $ENERGYPLUS_INSTALL_VERSION"
+        echo "In YML $UBUNTU_VERSION"
         bash .github/workflows/install.sh
 
     - name: Test with pytest
