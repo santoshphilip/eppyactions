@@ -24,6 +24,10 @@ on:
         required: true
         default: '23.2.0'
 
+env:
+  mascot: Mona
+  super_duper_var: totally_awesome
+
 
 jobs:
   build:
