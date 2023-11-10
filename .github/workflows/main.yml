@@ -34,23 +34,6 @@ jobs:
       matrix:
         python-version: ["3.11", ]
 
-    inputs:
-      energyplus-version:
-        description: 'EnergyPlus major.minor.patch version'
-        required: true
-        default: 23.2.0
-      energyplus-sha:
-        description: 'EnergyPlus version SHA'
-        required: true
-        default: 7636e6b3e9
-      energyplus-install:
-        description: 'EnergyPlus major-minor-patch version'
-        default: 23-2-0
-        required: true
-      gumby:
-        description: 'EnergyPlus major.minor.patch version'
-        required: true
-        default: '23.2.0'
 
     steps:
     - uses: actions/checkout@v3
@@ -65,7 +48,7 @@ jobs:
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - run: echo see the dict ${{ inputs.gumby }} here
       shell: bash
-    - run: echo Installing EnergyPlusV${{ github.event.inputs.energyplus-version }}...
+    - run: echo Installing EnergyPlusV${{ github.event }}...
       shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
