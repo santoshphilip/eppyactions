@@ -27,6 +27,7 @@ on:
 env:
   mascot: Mona
   super_duper_var: totally_awesome
+  energyplus-version: 23.2.0
 
 
 jobs:
@@ -50,7 +51,7 @@ jobs:
     #     python -m pip install --upgrade pip
     #     python -m pip install pytest
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - run: echo see the dict ${{ env.mascot }} here
+    - run: echo see the dict ${{ env.energyplus-version }} here
       shell: bash
     - run: echo Installing EnergyPlusV${{ github.event }}...
       shell: bash
