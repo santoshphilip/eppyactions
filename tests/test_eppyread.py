@@ -26,7 +26,7 @@ def test_getversion(iddname, idfname, expected):
     "iddname, idfname, expected",
     [
 #     (iddfhandle, StringIO("  Version,23.2.0;"), "23.2.0"), # iddname, idfname, expected
-    (iddfhandle, StringIO("  Version,8.2.0;"), "8.2.0"), # iddname, idfname, expected
+    (iddfhandle, StringIO("  Version,8.3.0;"), "8.3.0"), # iddname, idfname, expected
     ]
 )
 def test_getversion_1(iddname, idfname, expected):
