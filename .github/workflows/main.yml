@@ -6,23 +6,6 @@ name: eppy package
 on:
   push:
     branches: [ "main" , "i1_epversion"]
-    inputs:
-      energyplus-version:
-        description: 'EnergyPlus major.minor.patch version'
-        required: true
-        default: 23.2.0
-      energyplus-sha:
-        description: 'EnergyPlus version SHA'
-        required: true
-        default: 7636e6b3e9
-      energyplus-install:
-        description: 'EnergyPlus major-minor-patch version'
-        default: 23-2-0
-        required: true
-      gumby:
-        description: 'EnergyPlus major.minor.patch version'
-        required: true
-        default: 20.04
 
 env:
   energyplus-version: 23.2.0
@@ -65,9 +48,6 @@ jobs:
         ENERGYPLUS_SHA: ${{ env.energyplus-sha }}
         ENERGYPLUS_INSTALL_VERSION: ${{ env.energyplus-install }}
         UBUNTU_VERSION: ${{ env.ubuntu-version }}
-        # ENERGYPLUS_VERSION: 23.2.0
-        # ENERGYPLUS_SHA: 7636e6b3e9
-        # ENERGYPLUS_INSTALL_VERSION: 23-2-0
       run: |
         echo "In YML $ENERGYPLUS_VERSION"
         echo "In YML $ENERGYPLUS_SHA"
