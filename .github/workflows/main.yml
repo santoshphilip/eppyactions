@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" , "i1_epversion"]
     inputs:
-      energyplus_version:
+      gumby:
         description: 'EnergyPlus major.minor.patch version'
         required: true
         default: 23.2.0
@@ -45,7 +45,7 @@ jobs:
     #     python -m pip install --upgrade pip
     #     python -m pip install pytest
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - run: echo see the dict ${{ inputs.energyplus_version }} here
+    - run: echo see the dict ${{ inputs.gumby }} here
       shell: bash
     - run: echo Installing EnergyPlusV${{ github.event.inputs.energyplus-version }}...
       shell: bash
