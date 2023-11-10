@@ -8,9 +8,9 @@ on:
     branches: [ "main" , "i1_epversion"]
 
 env:
-  energyplus-version: 23.2.0
-  energyplus-sha: 7636e6b3e9
-  energyplus-install: 23-2-0
+  energyplus-version: 8.2.0
+  energyplus-sha: 8397c2e30b
+  energyplus-install:i 8-2-0
   ubuntu-version: 20.04
 
 

@@ -21,7 +21,9 @@ def getversion(iddname, idfname):
     return versionnumber
 
 def getversion_1(iddname, idfname):
-    """return the version number of the idf file"""
+    """return the version number of the idf file
+    uses eppy.idfopen
+    needs E+ installed"""
     idf = eppy.openidf(idfname)
     version = idf.idfobjects['version'][0]
     versionnumber = version.Version_Identifier
