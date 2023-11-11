@@ -5,7 +5,7 @@ name: eppy package
 
 on:
   push:
-    branches: [ "main" , "i1_epversion"]
+    branches: [ "main" , "mac"]
 
 env:
   energyplus-version1: 8.3.0
@@ -16,18 +16,12 @@ env:
   energyplus-install2: 23-2-0
   ubuntu-version: 20.04
 
-# env:
-#   energyplus-version: 8.3.0
-#   energyplus-sha: 6d97d074ea
-#   energyplus-install: 8-3-0
-#   ubuntu-version: 20.04
-
 
 
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: macos-12
     strategy:
       fail-fast: false
       matrix:
