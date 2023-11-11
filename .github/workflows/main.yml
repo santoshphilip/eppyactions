@@ -5,7 +5,7 @@ name: eppy package
 
 on:
   push:
-    branches: [ "main" , "oneeplus"]
+    branches: ["oneeplus"]
 
 env:
   # energyplus-version1: 8.3.0
