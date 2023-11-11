@@ -1,3 +1,7 @@
+2023-11-11
+==========
+
+mac install on CI is not running. Try to install on older mac OS [10 rather than 12]
 2023-11-10
 ==========
 

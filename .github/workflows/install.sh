@@ -29,7 +29,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   if version_gt $ENERGYPLUS_VERSION 9.3.0; then
     export EXT=dmg
-    export PLATFORM=Darwin-macOS12.1
+    export PLATFORM=Darwin-macOS10.15
   else
     export EXT=dmg
     export PLATFORM=Darwin
