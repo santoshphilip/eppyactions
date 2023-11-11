@@ -5,7 +5,7 @@ name: eppy package
 
 on:
   push:
-    branches: ["mac1"]
+    branches: ["windows"]
 
 env:
   energyplus-version2: 23.2.0
@@ -19,7 +19,7 @@ env:
 jobs:
   build:
 
-    runs-on: macos-11
+    runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
