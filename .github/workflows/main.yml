@@ -5,7 +5,7 @@ name: eppy package
 
 on:
   push:
-    branches: ["oneeplus"]
+    branches: ["mac1"]
 
 env:
   energyplus-version2: 23.2.0
